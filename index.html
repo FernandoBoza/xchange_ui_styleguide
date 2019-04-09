@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Xchange Styleguide</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <section class="intro">
+      <img src="xchange-full-logo.svg" alt="" />
+      <h1 class="xl_txt">UI Styleguide</h1>
+      <span class="tag">V2</span>
+    </section>
+
+    <section class="colors">
+      <h1 class="xl_txt">Colors</h1>
+      <ul>
+        <li class="bg_gray_one">#333541 <span class="bg_color">.bg_gray_one</span></li>
+        <li class="bg_gray_two">#383a47 <span class="bg_color">.bg_gray_two</span></li>
+        <li class="bg_gray_three">#505264 <span class="bg_color">.bg_gray_three</span></li>
+        <li class="bg_blue">#5a91ff <span class="bg_color">.bg_blue</span></li>
+      </ul>
+    </section>
+
+    <section class="typography">
+      <h1 class="xl_txt">Typography <span>Font : Chalet London Sixty</span></h1>
+
+      <h1>H1 - Titles : 1.6 rem</h1>
+      <h2>H2 - Subtitles: 1.2 rem</h2>
+      <p>P - Copy, Body text: 1 rem</p>
+      <span>Span - indicators & notifications: .9 rem</span>
+    </section>
+
+    <section class="inputs">
+      <h1 class="xl_txt">Inputs</h1>
+
+      <ul class="input_container">
+        <li><input type="text" placeholder="Placeholder" /></li>
+        <li><input style="border-color: #5a91ff" type="text" placeholder=":focused" /></li>
+        <li><input class="error" type="text" placeholder="Error" /> <span class="class_name">.error</span></li>
+        <li>
+          <div class="icon-input login">
+            <input type="text" placeholder="Input with icons" />
+          </div>
+          <span class="class_name">div.icon-input.login > input</span>
+        </li>
+        <li>
+          <div class="icon-input search">
+            <input type="text" placeholder="Search" />
+          </div>
+          <span class="class_name">div.icon-input.search > input</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="textarea">
+      <h1 class="xl_txt">Textarea</h1>
+
+      <textarea name="" id="">
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias numquam, nostrum ex suscipit illo saepe aperiam! Aperiam facilis natus corporis. Eum fugiat eaque quo aperiam facilis. Beatae est reiciendis earum quos itaque! Amet, nemo laborum sapiente veniam reiciendis vel eaque, beatae odit, officiis laboriosam vero!</textarea
+      >
+    </section>
+
+    <section>
+      <h1 class="xl_txt">Dropdowns</h1>
+
+      <div class="dropdown input">
+        <button class="trigger">Select <i class="fal fa-chevron-circle-down"></i></button>
+        <ul class="dropdown_list">
+          <li>Bonjour</li>
+          <li>
+            <label for="checkbox_list">Hello</label>
+            <input type="checkbox" id="checkbox_list" />
+          </li>
+          <li>Hola</li>
+          <li>A salem alekum</li>
+        </ul>
+      </div>
+
+      <span class="class_name">div.dropdown.input > button.trigger + ul.dropdown_list</span>
+    </section>
+
+    <section class="buttons">
+      <h1 class="xl_txt">Buttons</h1>
+      <ul>
+        <li><button class="resolve">Resolve</button> <span class="class_name">.resolve</span></li>
+        <li><button class="resolve hover">Hover</button></li>
+        <li><button class="resolve active">Active</button></li>
+        <li><button class="reject">Reject</button> <span class="class_name">.reject</span></li>
+        <li>
+          <button class="resolve"><i class="fas fa-plus"></i> Icon</button>
+        </li>
+        <li>
+          <button class="reject"><i class="fas fa-power-off"></i> Icon</button>
+        </li>
+        <li><button class="disabled" disabled>Disabled</button></li>
+      </ul>
+    </section>
+
+    <section class="switches">
+      <h1 class="xl_txt">Switches & Toggles <span>Toggle first, label second</span></h1>
+
+      <div>
+        <ul class="checkboxes">
+          <h1>Checkboxes</h1>
+          <li>
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox">Checkbox</label>
+          </li>
+          <li>
+            <input type="checkbox" id="hover" />
+            <label class="hover" for="hover">Hover</label>
+          </li>
+          <li>
+            <input type="checkbox" id="checked" checked />
+            <label for="checked">Checked</label>
+          </li>
+          <li>
+            <input type="checkbox" id="disabled" disabled />
+            <label class="disabled" for="disabled">Disabled</label>
+            <span style="opacity: .5; margin-left: 1rem">.disabled</span>
+          </li>
+        </ul>
+
+        <ul class="radio-switch">
+          <h1>Radio Switch</h1>
+          <li>
+            <input type="radio" id="radio" name="switch" />
+            <label for="radio">Radio</label>
+          </li>
+          <li>
+            <input type="radio" id="radio_hover" name="switch" />
+            <label for="radio_hover" class="hover">Hover</label>
+          </li>
+          <li>
+            <input type="radio" id="radio_checked" name="switch" checked />
+            <label for="radio_checked">Checked</label>
+          </li>
+          <li>
+            <input type="radio" id="disabled" disabled />
+            <label class="disabled" for="disabled">Disabled</label>
+            <span style="opacity: .5; margin-left: 1rem">.disabled</span>
+          </li>
+        </ul>
+
+        <ul class="checkboxes-switchs">
+          <h1>Switches <span>input[type='checkbox'].switch</span></h1>
+          <li>
+            <input class="switch" type="checkbox" id="switch" />
+            <label for="switch">Switch</label>
+          </li>
+          <li>
+            <input class="switch" type="checkbox" id="switch_hover" />
+            <label class="hover" for="switch_hover">Hover</label>
+          </li>
+          <li>
+            <input class="switch" type="checkbox" id="switch_checked" checked />
+            <label for="switch_checked">Checked</label>
+          </li>
+          <li>
+            <input class="switch" type="checkbox" id="disabled" disabled />
+            <label class="disabled" for="disabled">Disabled</label>
+            <span style="opacity: .5; margin-left: 1rem">.disabled</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

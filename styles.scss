@@ -1,0 +1,429 @@
+// Font Typeface
+@import url("https://use.typekit.net/zdl1gva.css");
+
+// Colors
+$gray_one: #333541;
+$gray_two: #383a47;
+$gray_three: #505264;
+$blue: #5a91ff;
+$red: #ff0000;
+
+.bg_gray_one {
+  background: $gray_one;
+}
+.bg_gray_two {
+  background: $gray_two;
+}
+.bg_gray_three {
+  background: $gray_three;
+}
+.bg_blue {
+  background: $blue;
+}
+
+// Typeography
+h1.xl_txt {
+  font-size: 2rem;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 90px;
+    height: 4px;
+    background: $blue;
+    border-radius: 5px;
+  }
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+span {
+  font-size: 0.9rem;
+}
+
+p,
+span {
+  color: #ccc;
+}
+
+h1,
+p {
+  padding: 1rem 0;
+}
+
+body {
+  font-family: chalet-london-sixty, sans-serif;
+  background: $gray_one;
+  color: #f9fbff;
+  padding: 2rem;
+  padding-top: 7rem;
+}
+
+section {
+  padding: 2rem;
+  border-radius: 5px;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: $gray_two;
+  box-shadow: 0px 11px 18px #0000002e;
+}
+
+.tag {
+  background: lighten($blue, 5%);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  width: fit-content;
+  height: 12px;
+  color: white;
+}
+
+.intro {
+  top: 0;
+  left: 0;
+  z-index: 6;
+  width: 97vw;
+  display: grid;
+  padding: 1rem 2rem;
+  grid-gap: 1rem;
+  position: fixed;
+  grid-template-columns: 150px auto 1fr;
+
+  h1::after {
+    content: none;
+  }
+}
+
+.colors {
+  ul {
+    display: grid;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+
+    li {
+      width: 10rem;
+      height: 10rem;
+      display: grid;
+      color: white;
+      border-radius: 5%;
+      text-align: center;
+      position: relative;
+      align-items: center;
+      margin-bottom: 1rem;
+      box-shadow: 0px 3px 7px 0px #00000094;
+
+      span.bg_color {
+        bottom: -3rem;
+        opacity: 0.5;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.input_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+}
+
+.class_name {
+  opacity: 0.5;
+  padding-left: 5px;
+  padding-top: 0.9rem;
+  display: flex;
+}
+
+input[type="text"],
+.dropdown.input {
+  height: 3rem;
+  width: 18rem;
+  font-size: 1rem;
+  padding: 0 0 0 1rem;
+  box-shadow: 0px 3px 7px 0px #00000054;
+
+  &:focus {
+    outline: none;
+    border-color: $blue;
+  }
+
+  &::placeholder {
+    color: white;
+  }
+
+  &.error {
+    border-color: $red;
+  }
+}
+
+.icon-input {
+  position: relative;
+  &::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    position: absolute;
+    top: 32%;
+    left: 5%;
+  }
+
+  &.login::before {
+    content: "\f007";
+  }
+
+  &.search::before {
+    content: "\f002";
+  }
+
+  input[type="text"] {
+    width: 16.6rem;
+    padding-left: 2.5rem;
+  }
+}
+
+input[type="text"],
+textarea {
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  background: $gray_one;
+  transition: border 0.3s;
+  border: 1px solid transparent;
+  font-family: chalet-london-sixty, sans-serif;
+
+  &:focus {
+    border: 1px solid $blue;
+  }
+}
+
+textarea {
+  width: 20rem;
+  resize: none;
+  height: 10rem;
+  padding: 1rem;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  box-shadow: 0px 3px 7px 0px #00000054;
+}
+
+.dropdown.input {
+  padding: 0;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid transparent;
+
+  &.show {
+    border: 1px solid $blue;
+  }
+
+  button {
+    display: flex;
+    width: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 0 1rem;
+    height: inherit;
+    box-shadow: none;
+    background: inherit;
+    justify-content: space-between;
+
+    i {
+      font-size: 1.2rem;
+    }
+  }
+
+  ul.dropdown_list {
+    left: 0;
+    top: 121%;
+    z-index: 1;
+    width: 100%;
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    background: $gray_one;
+    border: 1px solid $blue;
+    box-shadow: 1px 7px 11px 0px #00000030;
+
+    &.show {
+      display: block;
+    }
+
+    li {
+      display: grid;
+      padding: 1rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      justify-content: space-evenly;
+      grid-template-columns: 1fr auto;
+
+      &:hover {
+        background: $blue;
+      }
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.buttons {
+  ul {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+button {
+  border: none;
+  padding: 1rem;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s;
+  box-shadow: 0px 3px 7px 0px #00000022;
+
+  .fas {
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    box-shadow: 0px 3px 7px 0px #00000054;
+  }
+
+  &.resolve {
+    color: white;
+    background: $blue;
+
+    &.hover,
+    &:hover {
+      background: darken($blue, 5%);
+    }
+
+    &.active,
+    &:active {
+      background: darken($blue, 10%);
+    }
+  }
+
+  &.reject {
+    background: transparent;
+    color: #ccc;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &.disabled {
+    color: #ccc;
+    opacity: 0.8;
+    background: gray;
+    // pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+.switches {
+  div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  ul li {
+    margin-bottom: 1rem;
+  }
+}
+
+label,
+input {
+  cursor: pointer;
+}
+
+label.hover,
+label:hover {
+  color: lighten($blue, 10%);
+}
+
+label.disabled {
+  color: #ccc;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="radio"] + label:before,
+input[type="checkbox"] + label:before {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  font-family: "Font Awesome 5 Pro";
+}
+
+// CHECKBOXES
+
+/* unchecked */
+input[type="checkbox"] + label:before {
+  content: "\f0c8";
+}
+/* checked */
+input[type="checkbox"]:checked + label:before {
+  content: "\f14a";
+}
+
+// RADIO
+
+/* unchecked */
+input[type="radio"] + label:before {
+  content: "\f111";
+  font-weight: 100;
+}
+/* checked */
+input[type="radio"]:checked + label:before {
+  content: "\f111";
+  font-weight: bold;
+}
+
+// Switches
+
+/* unchecked */
+input.switch[type="checkbox"] + label:before {
+  content: "\f204";
+  font-weight: 400;
+}
+/* checked */
+input.switch[type="checkbox"]:checked + label:before {
+  content: "\f205";
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 1280px) {
+  .input_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
