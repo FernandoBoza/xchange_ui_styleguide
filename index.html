@@ -7,7 +7,8 @@
     <title>Xchange Styleguide</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="./fontawesome-pro-5.8.1-web/css/all.min.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -87,7 +88,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias numquam, nos
     </section>
 
     <section class="buttons">
-      <h1 class="xl_txt">Buttons</h1>
+      <h1 class="xl_txt">Buttons <span>&ltbutton&gt&lt/button&gt</span></h1>
       <ul>
         <li><button class="resolve">Resolve</button> <span class="class_name">.resolve</span></li>
         <li><button class="resolve hover">Hover</button></li>
@@ -168,6 +169,82 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias numquam, nos
             <label class="disabled" for="disabled">Disabled</label>
             <span style="opacity: .5; margin-left: 1rem">.disabled</span>
           </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="icons">
+      <h1 class="xl_txt">Icons <span>Grab the CDN Pro from Fontawesome, with PRO we have weight options</span></h1>
+
+      <div>
+        <ul>
+          <h1>Solid <span>.fas</span></h1>
+          <li><i class="fas fa-search"></i><span>.fas.fa-search</span></li>
+          <li><i class="fas fa-user"></i><span>.fas.fa-user</span></li>
+          <li><i class="fas fa-user-circle"></i><span>.fas.fa-user-circle</span></li>
+          <li><i class="fas fa-lock"></i><span>.fas.fa-lock</span></li>
+          <li><i class="fas fa-plus"></i><span>.fas.fa-plus</span></li>
+          <li><i class="fas fa-times"></i><span>.fas.fa-times</span></li>
+          <li><i class="fas fa-ellipsis-v"></i><span>.fas.fa-ellipsis-v</span></li>
+          <li><i class="fas fa-download"></i><span>.fas.fa-download</span></li>
+          <li><i class="fas fa-sync"></i><span>.fas.fa-sync</span></li>
+          <li><i class="fas fa-link"></i><span>.fas.fa-link</span></li>
+          <li><i class="fas fa-redo-alt"></i><span>.fas.fa-redo-alt</span></li>
+          <li>
+            <span class="fa-stack sync">
+              <i class="fal fa-video fa-stack-2x"></i>
+              <i class="fal fa-stream fa-stack-1x"></i>
+            </span>
+            <span>span.fa-stack.sync > i.fal.fa-stream.fa-stack-1x</span>
+          </li>
+
+          <h2>Nav Icons</h2>
+          <li><i class="fas fa-home"></i><span>.fas.fa-home</span></li>
+          <li><i class="fas fa-folder"></i><span>.fas.fa-folder</span></li>
+          <li><i class="fas fa-brain"></i><span>.fas.fa-brain</span></li>
+          <li><i class="fas fa-clipboard-list"></i><span>.fas.fa-clipboard-list</span></li>
+          <li><i class="fas fa-video"></i><span>.fas.fa-video</span></li>
+
+          <h2>Media Player</h2>
+          <li><i class="fas fa-play"></i><span>.fas.fa-play</span></li>
+          <li><i class="fas fa-pause"></i><span>.fas.fa-pause</span></li>
+          <li><i class="fas fa-step-backward"></i><span>.fas.fa-step-backward</span></li>
+          <li><i class="fas fa-step-forward"></i><span>.fas.fa-step-forward</span></li>
+          <li><i class="fas fa-expand"></i><span>.fas.fa-expand</span></li>
+          <li><i class="fas fa-volume"></i><span>.fas.fa-volume</span></li>
+          <li><i class="fas fa-cog"></i><span>.fas.fa-cog</span></li>
+          <li><i class="fas fa-brackets-curly"></i><span>.fas.fa-brackets-curly</span></li>
+          <li><i class="fas fa-comment-alt-lines"></i><span>.fas.fa-comment-alt-lines</span></li>
+        </ul>
+
+        <ul>
+          <h1>Regular <span>.far</span></h1>
+          <li><i class="far fa-search"></i><span>.far.fa-search</span></li>
+          <li><i class="far fa-user"></i><span>.far.fa-user</span></li>
+          <li><i class="far fa-user-circle"></i><span>.far.fa-user-circle</span></li>
+          <li><i class="far fa-lock"></i><span>.far.fa-lock</span></li>
+          <li><i class="far fa-plus"></i><span>.far.fa-plus</span></li>
+          <li><i class="far fa-times"></i><span>.far.fa-times</span></li>
+          <li><i class="far fa-home"></i><span>.far.fa-home</span></li>
+          <li><i class="far fa-folder"></i><span>.far.fa-folder</span></li>
+          <li><i class="far fa-brain"></i><span>.far.fa-brain</span></li>
+          <li><i class="far fa-clipboard-list"></i><span>.far.fa-clipboard-list</span></li>
+          <li><i class="far fa-video"></i><span>.far.fa-video</span></li>
+        </ul>
+
+        <ul>
+          <h1>Light <span>.fal</span></h1>
+          <li><i class="fal fa-search"></i><span>.fal.fa-search</span></li>
+          <li><i class="fal fa-user"></i><span>.fal.fa-user</span></li>
+          <li><i class="fal fa-user-circle"></i><span>.fal.fa-user-circle</span></li>
+          <li><i class="fal fa-lock"></i><span>.fal.fa-lock</span></li>
+          <li><i class="fal fa-plus"></i><span>.fal.fa-plus</span></li>
+          <li><i class="fal fa-times"></i><span>.fal.fa-times</span></li>
+          <li><i class="fal fa-home"></i><span>.fal.fa-home</span></li>
+          <li><i class="fal fa-folder"></i><span>.fal.fa-folder</span></li>
+          <li><i class="fal fa-brain"></i><span>.fal.fa-brain</span></li>
+          <li><i class="fal fa-clipboard-list"></i><span>.fal.fa-clipboard-list</span></li>
+          <li><i class="fal fa-video"></i><span>.fal.fa-video</span></li>
         </ul>
       </div>
     </section>
